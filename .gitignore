@@ -20,3 +20,16 @@ Thumbs.db
 # Cloudflare
 .wrangler/
 wrangler.toml
+
+# ROMs (descomentar si quieres trackear tus ROMs en Git)
+# roms/**/*.sfc
+# roms/**/*.smc
+# roms/**/*.md
+# roms/**/*.bin
+# roms/**/*.gen
+# roms/**/*.gb
+# roms/**/*.gbc
+# roms/**/*.gba
+# roms/**/*.n64
+# roms/**/*.z64
+# roms/**/*.nes

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Robotnik's Mean Bean Machine - Hypackel Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game {
+            width: 100%;
+            max-width: 1024px;
+            height: 100%;
+            max-height: 768px;
+        }
+        .loading {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+        }
+        .controls-info {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            z-index: 1000;
+            border: 2px solid #eb3349;
+        }
+        .game-title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-size: 24px;
+            z-index: 1000;
+            border: 2px solid #eb3349;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-title">🤖 Dr. Robotnik's Mean Bean Machine</div>
+
+    <div id="game-container">
+        <div class="loading">
+            <p>Cargando Dr. Robotnik's Mean Bean Machine...</p>
+            <p style="font-size: 14px; margin-top: 10px;">Esto puede tomar unos segundos</p>
+        </div>
+        <div id="game"></div>
+    </div>
+
+    <div class="controls-info">
+        🎮 Controles: Flechas = Mover | Z = Rotar izq. | X = Rotar der. | Enter = Start | Shift = Select
+    </div>
+
+    <script>
+        EJS_player = '#game';
+        EJS_core = 'segaMD'; // Sega Genesis/Mega Drive
+        EJS_gameUrl = '../roms/genesis/dr-robotnik-mean-bean.md'; // Aquí va tu ROM
+        EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/';
+        EJS_startOnLoaded = true;
+        EJS_biosUrl = '';
+        EJS_gameID = 'dr-robotnik-mean-bean';
+
+        // Custom colors
+        EJS_color = '#eb3349';
+        EJS_backgroundColor = '#0a0a0a';
+
+        // Volume
+        EJS_volume = 0.5;
+
+        // Options
+        EJS_VirtualGamepadSettings = {
+            joystickSize: 100,
+            buttonSize: 60,
+            opacity: 0.7
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+</body>
+</html>

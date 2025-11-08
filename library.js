@@ -288,14 +288,14 @@ const gamesDatabase = [
         gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)"
     },
 
-    // Retro Games - SNES
+    // Retro Games - SNES (Con EmulatorJS)
     {
         id: 31,
         title: "Super Castlevania IV",
         category: "retro",
         icon: "🧛",
         description: "Clásico de acción de SNES - Castillo de Drácula",
-        url: "https://www.retrogames.cc/snes-games/super-castlevania-iv.html",
+        url: "games/super-castlevania-iv.html",
         gradient: "linear-gradient(135deg, #434343 0%, #000000 100%)"
     },
     {
@@ -304,7 +304,7 @@ const gamesDatabase = [
         category: "retro",
         icon: "🚀",
         description: "Aventura épica de exploración en el planeta Zebes",
-        url: "https://www.retrogames.cc/snes-games/super-metroid.html",
+        url: "games/super-metroid.html",
         gradient: "linear-gradient(135deg, #4b79a1 0%, #283e51 100%)"
     },
     {
@@ -335,14 +335,14 @@ const gamesDatabase = [
         gradient: "linear-gradient(135deg, #8e44ad 0%, #c0392b 100%)"
     },
 
-    // Retro Games - Sega Genesis
+    // Retro Games - Sega Genesis (Con EmulatorJS)
     {
         id: 36,
         title: "Dr. Robotnik's Mean Bean Machine",
         category: "retro",
         icon: "🤖",
         description: "Puzzle adictivo estilo Puyo Puyo de Sega Genesis",
-        url: "https://www.retrogames.cc/genesis-games/dr-robotniks-mean-bean-machine.html",
+        url: "games/dr-robotnik-mean-bean.html",
         gradient: "linear-gradient(135deg, #eb3349 0%, #f45c43 100%)"
     },
     {
