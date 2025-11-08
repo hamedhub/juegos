@@ -1,4 +1,4 @@
-# 🎮 Hypackel Games - Biblioteca de Juegos en la Nube
+# 🎮 El Pinguino Games - Biblioteca de Juegos en la Nube
 
 Una biblioteca completa de juegos HTML5 embebidos, lista para desplegar en Cloudflare Pages. Accede a más de 30 juegos de alta calidad directamente desde tu navegador.
 
