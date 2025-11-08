@@ -286,6 +286,118 @@ const gamesDatabase = [
         description: "Ajedrez contra la computadora",
         url: "https://www.chess.com/play/computer",
         gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)"
+    },
+
+    // Retro Games - SNES
+    {
+        id: 31,
+        title: "Super Castlevania IV",
+        category: "retro",
+        icon: "🧛",
+        description: "Clásico de acción de SNES - Castillo de Drácula",
+        url: "https://www.retrogames.cc/snes-games/super-castlevania-iv.html",
+        gradient: "linear-gradient(135deg, #434343 0%, #000000 100%)"
+    },
+    {
+        id: 32,
+        title: "Super Metroid",
+        category: "retro",
+        icon: "🚀",
+        description: "Aventura épica de exploración en el planeta Zebes",
+        url: "https://www.retrogames.cc/snes-games/super-metroid.html",
+        gradient: "linear-gradient(135deg, #4b79a1 0%, #283e51 100%)"
+    },
+    {
+        id: 33,
+        title: "Super Mario World",
+        category: "retro",
+        icon: "🍄",
+        description: "El clásico de plataformas de SNES",
+        url: "https://www.retrogames.cc/snes-games/super-mario-world.html",
+        gradient: "linear-gradient(135deg, #f2994a 0%, #f2c94c 100%)"
+    },
+    {
+        id: 34,
+        title: "The Legend of Zelda: A Link to the Past",
+        category: "retro",
+        icon: "⚔️",
+        description: "Aventura legendaria de SNES",
+        url: "https://www.retrogames.cc/snes-games/the-legend-of-zelda-a-link-to-the-past.html",
+        gradient: "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+    },
+    {
+        id: 35,
+        title: "Donkey Kong Country",
+        category: "retro",
+        icon: "🦍",
+        description: "Plataformas con gráficos revolucionarios",
+        url: "https://www.retrogames.cc/snes-games/donkey-kong-country.html",
+        gradient: "linear-gradient(135deg, #8e44ad 0%, #c0392b 100%)"
+    },
+
+    // Retro Games - Sega Genesis
+    {
+        id: 36,
+        title: "Dr. Robotnik's Mean Bean Machine",
+        category: "retro",
+        icon: "🤖",
+        description: "Puzzle adictivo estilo Puyo Puyo de Sega Genesis",
+        url: "https://www.retrogames.cc/genesis-games/dr-robotniks-mean-bean-machine.html",
+        gradient: "linear-gradient(135deg, #eb3349 0%, #f45c43 100%)"
+    },
+    {
+        id: 37,
+        title: "Sonic The Hedgehog",
+        category: "retro",
+        icon: "💨",
+        description: "El erizo azul más rápido del mundo",
+        url: "https://www.retrogames.cc/genesis-games/sonic-the-hedgehog.html",
+        gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)"
+    },
+    {
+        id: 38,
+        title: "Sonic The Hedgehog 2",
+        category: "retro",
+        icon: "⚡",
+        description: "Sonic con Tails en nuevas aventuras",
+        url: "https://www.retrogames.cc/genesis-games/sonic-the-hedgehog-2.html",
+        gradient: "linear-gradient(135deg, #0575e6 0%, #021b79 100%)"
+    },
+    {
+        id: 39,
+        title: "Streets of Rage 2",
+        category: "retro",
+        icon: "👊",
+        description: "Beat 'em up clásico de Sega Genesis",
+        url: "https://www.retrogames.cc/genesis-games/streets-of-rage-2.html",
+        gradient: "linear-gradient(135deg, #c31432 0%, #240b36 100%)"
+    },
+    {
+        id: 40,
+        title: "Golden Axe",
+        category: "retro",
+        icon: "🪓",
+        description: "Aventura de fantasía y acción",
+        url: "https://www.retrogames.cc/genesis-games/golden-axe.html",
+        gradient: "linear-gradient(135deg, #f09819 0%, #edde5d 100%)"
+    },
+    {
+        id: 41,
+        title: "Mortal Kombat",
+        category: "retro",
+        icon: "🥋",
+        description: "El legendario juego de lucha",
+        url: "https://www.retrogames.cc/genesis-games/mortal-kombat.html",
+        gradient: "linear-gradient(135deg, #000000 0%, #e74c3c 100%)"
+    },
+    {
+        id: 42,
+        title: "Earthworm Jim",
+        category: "retro",
+        icon: "🪱",
+        description: "Plataformas con humor único",
+        url: "https://www.retrogames.cc/genesis-games/earthworm-jim.html",
+        gradient: "linear-gradient(135deg, #a8c0ff 0%, #3f2b96 100%)"
     }
 ];
 
@@ -406,7 +518,8 @@ function getCategoryName(category) {
         'sports': 'Deportes',
         'racing': 'Carreras',
         'io': 'IO Games',
-        'classic': 'Clásico'
+        'classic': 'Clásico',
+        'retro': 'Retro'
     };
     return categories[category] || category;
 }
