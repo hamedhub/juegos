@@ -37,52 +37,53 @@ Una biblioteca completa de juegos HTML5 embebidos, lista para desplegar en Cloud
 - Pac-Man, Snake, Space Invaders, Breakout
 - Solitaire, Chess
 
-## 🚀 Despliegue en Cloudflare Pages
+## 🚀 Opciones de Despliegue
 
-### Opción 1: Despliegue desde GitHub (Recomendado)
+Tienes **DOS opciones** para desplegar tu sitio:
 
-1. **El código ya está en GitHub**
-   - Este repositorio está listo para desplegarse
+### 🔷 Opción A: Cloudflare Pages (Más Fácil, Gratis Siempre)
 
-2. **Configura Cloudflare Pages**
-   - Ve a [dash.cloudflare.com](https://dash.cloudflare.com)
-   - Click en **"Workers & Pages"** → **"Create application"** → **"Pages"**
-   - Selecciona **"Connect to Git"**
-   - Autoriza GitHub y selecciona tu repositorio
-
-3. **Configuración del Proyecto**
-   ```
-   Project name: hypackel-games (o el que prefieras)
-   Production branch: main
-   Framework preset: None
-   Build command: (dejar vacío)
-   Build output directory: / (raíz)
-   ```
-
-4. **Deploy**
-   - Click en **"Save and Deploy"**
-   - Espera 1-2 minutos
-   - Tu sitio estará en: `https://hypackel-games.pages.dev`
-
-### Opción 2: Wrangler CLI (Para Desarrolladores)
-
+**Script Automatizado:**
 ```bash
-# Instalar Wrangler
-npm install -g wrangler
-
-# Autenticarse
-wrangler login
-
-# Desplegar
-wrangler pages publish . --project-name=hypackel-games
+./deploy.sh
 ```
 
-### Opción 3: Upload Directo (Drag & Drop)
+**O manualmente:**
+1. Ve a [dash.cloudflare.com](https://dash.cloudflare.com)
+2. Workers & Pages → Create → Pages → Connect to Git
+3. Selecciona el repositorio
+4. Deploy
 
-1. Descarga el repositorio como ZIP
-2. Ve a Cloudflare Pages → "Upload assets"
-3. Arrastra todos los archivos
-4. Click en "Deploy site"
+📚 **Guía completa**: Ver `DEPLOY_GUIDE.md` y `START_HERE.md`
+
+⏱️ **Tiempo**: 3-5 minutos
+
+### 🟠 Opción B: AWS CloudFront (Mejor para Trabajo/VPN)
+
+**Script Automatizado:**
+```bash
+./deploy-aws.sh
+```
+
+**O manualmente:**
+- Crear bucket S3
+- Configurar static website
+- Crear distribución CloudFront
+
+📚 **Guía completa**: Ver `AWS_CLOUDFRONT_GUIDE.md`
+
+⏱️ **Tiempo**: 15-20 minutos
+
+### 📊 Comparación Rápida
+
+| | Cloudflare | AWS CloudFront |
+|---|---|---|
+| **Facilidad** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **Precio** | Gratis siempre | Gratis 1er año |
+| **Bloqueo trabajo** | Moderado | Muy difícil |
+| **Setup** | 5 min | 20 min |
+
+📖 **Comparación completa**: Ver `DEPLOYMENT_OPTIONS.md`
 
 ## 🔒 Uso con VPN en el Trabajo
 
