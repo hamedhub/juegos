@@ -3,115 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Zone - Juegos Gratis</title>
+    <title>Hypackel Games - Biblioteca de Juegos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>🎮 Gaming Zone</h1>
-            <p class="subtitle">Juegos instantáneos sin descargas</p>
+            <div class="header-content">
+                <h1 class="logo">🎮 HYPACKEL</h1>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar juegos..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+            <nav class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="action">Acción</button>
+                <button class="category-btn" data-category="puzzle">Puzzle</button>
+                <button class="category-btn" data-category="sports">Deportes</button>
+                <button class="category-btn" data-category="racing">Carreras</button>
+                <button class="category-btn" data-category="io">IO Games</button>
+                <button class="category-btn" data-category="classic">Clásicos</button>
+            </nav>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container">
-        <section class="games-grid">
-            <!-- Snake Game -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>🐍 Snake Classic</h2>
-                </div>
-                <div class="game-container">
-                    <canvas id="snakeGame" width="400" height="400"></canvas>
-                    <div class="game-controls">
-                        <button onclick="startSnake()">Iniciar Juego</button>
-                        <p class="score">Puntuación: <span id="snakeScore">0</span></p>
-                    </div>
-                    <p class="instructions">Usa las flechas del teclado para moverte</p>
-                </div>
-            </div>
+        <div id="gamesGrid" class="games-library"></div>
 
-            <!-- Memory Game -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>🧠 Memory Cards</h2>
-                </div>
-                <div class="game-container">
-                    <div id="memoryGame" class="memory-grid"></div>
-                    <div class="game-controls">
-                        <button onclick="startMemory()">Nuevo Juego</button>
-                        <p class="score">Movimientos: <span id="memoryMoves">0</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tic Tac Toe -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>⭕ Tic Tac Toe</h2>
-                </div>
-                <div class="game-container">
-                    <div id="ticTacToe" class="tictactoe-grid"></div>
-                    <div class="game-controls">
-                        <button onclick="startTicTacToe()">Reiniciar</button>
-                        <p class="score" id="tictactoeStatus">Turno: X</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Breakout Game -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>🧱 Breakout</h2>
-                </div>
-                <div class="game-container">
-                    <canvas id="breakoutGame" width="400" height="400"></canvas>
-                    <div class="game-controls">
-                        <button onclick="startBreakout()">Iniciar Juego</button>
-                        <p class="score">Puntuación: <span id="breakoutScore">0</span></p>
-                    </div>
-                    <p class="instructions">Usa el mouse para mover la paleta</p>
-                </div>
-            </div>
-
-            <!-- 2048 Game -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>🔢 2048</h2>
-                </div>
-                <div class="game-container">
-                    <div id="game2048" class="game2048-grid"></div>
-                    <div class="game-controls">
-                        <button onclick="start2048()">Nuevo Juego</button>
-                        <p class="score">Puntuación: <span id="score2048">0</span></p>
-                    </div>
-                    <p class="instructions">Usa las flechas del teclado</p>
-                </div>
-            </div>
-
-            <!-- Tetris -->
-            <div class="game-card">
-                <div class="game-header">
-                    <h2>🟦 Tetris</h2>
-                </div>
-                <div class="game-container">
-                    <canvas id="tetrisGame" width="300" height="600"></canvas>
-                    <div class="game-controls">
-                        <button onclick="startTetris()">Iniciar Juego</button>
-                        <p class="score">Puntuación: <span id="tetrisScore">0</span></p>
-                    </div>
-                    <p class="instructions">Flechas: mover, Espacio: rotar</p>
-                </div>
-            </div>
-        </section>
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>😕 No se encontraron juegos con ese nombre</p>
+        </div>
     </main>
 
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="close-btn" onclick="closeGame()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="gameFrame" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="fullscreenGame()" class="fullscreen-btn">⛶ Pantalla Completa</button>
+                <button onclick="closeGame()" class="close-game-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Gaming Zone - Todos los juegos son gratuitos y de código abierto</p>
+            <p>Hypackel Games - Biblioteca de juegos gratuitos • Todos los juegos pertenecen a sus respectivos creadores</p>
         </div>
     </footer>
 
-    <script src="games.js"></script>
+    <script src="library.js"></script>
 </body>
 </html>
