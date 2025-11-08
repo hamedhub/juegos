@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Zone - Juegos Gratis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎮 Gaming Zone</h1>
+            <p class="subtitle">Juegos instantáneos sin descargas</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="games-grid">
+            <!-- Snake Game -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>🐍 Snake Classic</h2>
+                </div>
+                <div class="game-container">
+                    <canvas id="snakeGame" width="400" height="400"></canvas>
+                    <div class="game-controls">
+                        <button onclick="startSnake()">Iniciar Juego</button>
+                        <p class="score">Puntuación: <span id="snakeScore">0</span></p>
+                    </div>
+                    <p class="instructions">Usa las flechas del teclado para moverte</p>
+                </div>
+            </div>
+
+            <!-- Memory Game -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>🧠 Memory Cards</h2>
+                </div>
+                <div class="game-container">
+                    <div id="memoryGame" class="memory-grid"></div>
+                    <div class="game-controls">
+                        <button onclick="startMemory()">Nuevo Juego</button>
+                        <p class="score">Movimientos: <span id="memoryMoves">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tic Tac Toe -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>⭕ Tic Tac Toe</h2>
+                </div>
+                <div class="game-container">
+                    <div id="ticTacToe" class="tictactoe-grid"></div>
+                    <div class="game-controls">
+                        <button onclick="startTicTacToe()">Reiniciar</button>
+                        <p class="score" id="tictactoeStatus">Turno: X</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breakout Game -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>🧱 Breakout</h2>
+                </div>
+                <div class="game-container">
+                    <canvas id="breakoutGame" width="400" height="400"></canvas>
+                    <div class="game-controls">
+                        <button onclick="startBreakout()">Iniciar Juego</button>
+                        <p class="score">Puntuación: <span id="breakoutScore">0</span></p>
+                    </div>
+                    <p class="instructions">Usa el mouse para mover la paleta</p>
+                </div>
+            </div>
+
+            <!-- 2048 Game -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>🔢 2048</h2>
+                </div>
+                <div class="game-container">
+                    <div id="game2048" class="game2048-grid"></div>
+                    <div class="game-controls">
+                        <button onclick="start2048()">Nuevo Juego</button>
+                        <p class="score">Puntuación: <span id="score2048">0</span></p>
+                    </div>
+                    <p class="instructions">Usa las flechas del teclado</p>
+                </div>
+            </div>
+
+            <!-- Tetris -->
+            <div class="game-card">
+                <div class="game-header">
+                    <h2>🟦 Tetris</h2>
+                </div>
+                <div class="game-container">
+                    <canvas id="tetrisGame" width="300" height="600"></canvas>
+                    <div class="game-controls">
+                        <button onclick="startTetris()">Iniciar Juego</button>
+                        <p class="score">Puntuación: <span id="tetrisScore">0</span></p>
+                    </div>
+                    <p class="instructions">Flechas: mover, Espacio: rotar</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Gaming Zone - Todos los juegos son gratuitos y de código abierto</p>
+        </div>
+    </footer>
+
+    <script src="games.js"></script>
+</body>
+</html>
